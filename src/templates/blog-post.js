@@ -30,12 +30,15 @@ class BlogPostTemplate extends Component {
         >
           {post.frontmatter.date}
         </p>
+
         <MDXRenderer>{post.body}</MDXRenderer>
+
         <hr
           style={{
             marginBottom: rhythm(1)
           }}
         />
+
         <Bio />
 
         <ul

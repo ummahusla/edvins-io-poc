@@ -15,13 +15,25 @@ class BlogIndex extends Component {
     const siteTitle = data.site.siteMetadata.title;
     const posts = data.allMdx.edges;
 
+    // FIXME: Remove me after testing
+    const newPosts = [
+      ...posts,
+      ...posts,
+      ...posts,
+      ...posts,
+      ...posts,
+      ...posts,
+      ...posts,
+      ...posts
+    ];
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={INDEX_PAGE_TITLE} keywords={INDEX_PAGE_KEYWORDS} />
 
         <Bio />
 
-        {posts.map(({ node }) => {
+        {newPosts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
 
           return (

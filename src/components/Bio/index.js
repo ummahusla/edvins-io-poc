@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { rhythm } from '../../utils/typography';
+import styles from './index.module.scss';
 
 function Bio() {
   return (
@@ -11,28 +12,13 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata;
         return (
-          <section
-            style={{
-              display: `flex`,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              margin: '5rem 0'
-            }}
-          >
-            <div style={{ maxWidth: '700px' }}>
-              <h1
-                style={{
-                  fontSize: '48px',
-                  fontFamily: 'Merriweather, Georgia, serif',
-                  marginTop: 0
-                }}
-              >
-                Hi, I’m Edvins
-              </h1>
-              <p className="subtitle" style={{ fontSize: '22px', color: '#868e96' }}>
+          <section className={styles.wrapper}>
+            <div className={styles.container}>
+              <h1 className={styles.welcome}>Hi, I’m Edvins</h1>
+              <p className={styles.subtitle}>
                 I’m a developer and designer with a strong entrepreneurial spirit who builds
-                products users love.
+                products users love. I lead a front-end team by the day and do side hustle by the
+                night.
               </p>
               <p>
                 In the past, I’ve worked with companies like <strong>Betterware</strong>,{' '}
@@ -44,7 +30,7 @@ function Bio() {
               <p>
                 Today, I am helping to build the cyber risk prioritisation platform at{' '}
                 <strong>
-                  <a href="https://www.cyberowl.io/">CyberOwl</a>
+                  <a href="https://www.cyberowl.io/">Cyber Owl</a>
                 </strong>
                 &nbsp;as a <strong>Lead Front-End Developer</strong>.
               </p>
@@ -54,12 +40,7 @@ function Bio() {
               <Image
                 fixed={data.avatar.childImageSharp.fixed}
                 alt={author}
-                style={{
-                  // marginRight: rhythm(1 / 2),
-                  marginBottom: 0,
-                  minWidth: 50,
-                  borderRadius: `100%`
-                }}
+                className={styles.avatar}
               />
             </div>
           </section>

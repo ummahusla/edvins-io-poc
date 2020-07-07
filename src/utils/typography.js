@@ -19,8 +19,7 @@ Wordpress2016.overrideThemeStyles = () => {
       fontWeight: 800
     },
     body: {
-      // color: '#191516'
-      color: '#4950573'
+      color: '#1d2d35'
     }
   };
 };
