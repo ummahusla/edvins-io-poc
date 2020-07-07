@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 
-class NotFoundPage extends Component {
+class AboutPage extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="404: Not Found" />
+        <SEO title="About" />
 
-        <h1>Not Found</h1>
+        <h1>About Edvins</h1>
 
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        <p>dasdasdasd.</p>
       </Layout>
     );
   }
 }
 
-export default NotFoundPage;
+export default AboutPage;
