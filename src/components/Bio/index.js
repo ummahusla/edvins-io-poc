@@ -2,7 +2,6 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
-import { rhythm } from '../../utils/typography';
 import styles from './index.module.scss';
 
 function Bio() {
@@ -10,11 +9,13 @@ function Bio() {
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata;
+        const { author } = data.site.siteMetadata;
+        const firstName = author.split(' ')[0];
+
         return (
           <section className={styles.wrapper}>
             <div className={styles.container}>
-              <h1 className={styles.welcome}>Hi, I’m Edvins</h1>
+              <h1 className={styles.welcome}>Hi, I’m {firstName}</h1>
               <p className={styles.subtitle}>
                 I’m a developer and designer with a strong entrepreneurial spirit who builds
                 products users love. I lead a front-end team by the day and do side hustle by the
@@ -62,9 +63,6 @@ const bioQuery = graphql`
     site {
       siteMetadata {
         author
-        social {
-          twitter
-        }
       }
     }
   }

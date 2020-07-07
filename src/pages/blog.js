@@ -9,9 +9,9 @@ class BlogPage extends Component {
       <Layout location={this.props.location}>
         <SEO title="Blog" />
 
-        <h1>Blog Edvins</h1>
+        <h1>Blog page</h1>
 
-        <p>dasdasdasd.</p>
+        <p>Content</p>
       </Layout>
     );
   }

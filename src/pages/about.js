@@ -9,9 +9,9 @@ class AboutPage extends Component {
       <Layout location={this.props.location}>
         <SEO title="About" />
 
-        <h1>About Edvins</h1>
+        <h1>About page</h1>
 
-        <p>dasdasdasd.</p>
+        <p>Content</p>
       </Layout>
     );
   }
