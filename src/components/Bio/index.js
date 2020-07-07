@@ -17,11 +17,17 @@ function Bio() {
               flexDirection: 'row',
               justifyContent: 'space-between',
               alignItems: 'center',
-              marginBottom: rhythm(2.5)
+              margin: '5rem 0'
             }}
           >
             <div style={{ maxWidth: '700px' }}>
-              <h1 style={{ fontSize: '48px', fontFamily: 'Merriweather, Georgia, serif' }}>
+              <h1
+                style={{
+                  fontSize: '48px',
+                  fontFamily: 'Merriweather, Georgia, serif',
+                  marginTop: 0
+                }}
+              >
                 Hi, I’m Edvins
               </h1>
               <p className="subtitle" style={{ fontSize: '22px', color: '#868e96' }}>
