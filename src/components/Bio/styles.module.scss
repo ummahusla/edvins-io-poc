@@ -1,3 +1,6 @@
+$lead-font-family: Merriweather, Georgia, serif;
+$subtitle-color: #868e96;
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -11,13 +14,13 @@
 
   .welcome {
     font-size: 48px;
-    font-family: Merriweather, Georgia, serif;
+    font-family: $lead-font-family;
     margin-top: 0;
   }
 
   .subtitle {
     font-size: 22px;
-    color: #868e96;
+    color: $subtitle-color;
   }
 
   .avatar {

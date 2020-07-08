@@ -3,62 +3,29 @@ import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
+import Latest from '../components/Latest';
 import SEO from '../components/seo';
-import { rhythm } from '../utils/typography';
 
-class BlogIndex extends Component {
-  render() {
-    const INDEX_PAGE_TITLE = 'Edvins Antonovs';
-    const INDEX_PAGE_KEYWORDS = [`blog`, `gatsby`, `javascript`, `react`];
+const BlogIndex = ({ data, location }) => {
+  const INDEX_PAGE_TITLE = 'Edvins Antonovs';
+  const INDEX_PAGE_KEYWORDS = [`blog`, `gatsby`, `javascript`, `react`];
 
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMdx.edges;
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMdx.edges;
 
-    // FIXME: Remove me after testing
-    const newPosts = [
-      ...posts,
-      ...posts,
-      ...posts,
-      ...posts,
-      ...posts,
-      ...posts,
-      ...posts,
-      ...posts
-    ];
+  // FIXME: Remove me after testing
+  const newPosts = [...posts, ...posts, ...posts, ...posts, ...posts, ...posts, ...posts, ...posts];
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={INDEX_PAGE_TITLE} keywords={INDEX_PAGE_KEYWORDS} />
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title={INDEX_PAGE_TITLE} keywords={INDEX_PAGE_KEYWORDS} />
 
-        <Bio />
+      <Bio />
 
-        {newPosts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
-
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                  fontWeight: '900'
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-
-              <small>{node.frontmatter.date}</small>
-
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          );
-        })}
-      </Layout>
-    );
-  }
-}
+      <Latest posts={newPosts} />
+    </Layout>
+  );
+};
 
 export default BlogIndex;
 
@@ -69,7 +36,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 5) {
       edges {
         node {
           excerpt

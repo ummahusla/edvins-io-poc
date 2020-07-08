@@ -1,0 +1,62 @@
+$navbar-bg-color: #fff;
+$navbar-link-color: #868e96;
+
+.navbar {
+  margin: 36px 0;
+  position: static;
+  background: $navbar-bg-color;
+  box-shadow: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .brand {
+    margin-left: -24px;
+    margin-right: 24px;
+
+    &-link {
+      box-shadow: none;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 900;
+      white-space: nowrap;
+      font-size: 20px;
+      border-radius: 5px;
+      padding: 16px 24px;
+
+      &:hover {
+        background-color: darken($navbar-bg-color, 5%);
+        color: #1d2d35;
+      }
+    }
+  }
+
+  .emoji {
+    margin: 0 8px 0 2px;
+  }
+
+  .nav-link {
+    box-shadow: none;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 5px;
+    padding: 16px 24px;
+    color: $navbar-link-color;
+    font-weight: 400;
+    text-align: center;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: darken($navbar-bg-color, 5%);
+      color: #1d2d35;
+    }
+  }
+}

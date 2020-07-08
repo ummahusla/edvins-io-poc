@@ -1,13 +1,11 @@
 import React from 'react';
 
-const Footer = () => {
-  return (
-    <footer>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
-  );
-};
+import styles from './styles.module.scss';
+
+const Footer = () => (
+  <footer className={styles.footer}>
+    <p>Edvins Antonovs © {new Date().getFullYear()}</p>
+  </footer>
+);
 
 export default Footer;

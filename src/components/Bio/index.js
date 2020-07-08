@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import Image from 'gatsby-image';
 
-import styles from './index.module.scss';
+import styles from './styles.module.scss';
 
 const Bio = () => (
   <StaticQuery
@@ -30,12 +30,12 @@ const Bio = () => (
               Today, I am helping to build the cyber risk prioritisation platform at{' '}
               <strong>
                 <a href="https://www.cyberowl.io/">Cyber Owl</a>
-              </strong>
-              &nbsp;as a <strong>Lead Front-End Developer</strong>.
+              </strong>{' '}
+              as a <strong>Lead Front-End Developer</strong>.
             </p>
             <p>
               You can <Link to={`/blog`}>read my blog</Link> or{' '}
-              <Link to={`/about`}>read more about me here</Link>.
+              <Link to={`/about`}>learn more about me</Link>.
             </p>
           </div>
 
