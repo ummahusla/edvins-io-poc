@@ -20,6 +20,15 @@ Wordpress2016.overrideThemeStyles = () => {
     },
     body: {
       color: '#1d2d35'
+    },
+    p: {
+      marginBottom: '30px'
+    },
+    ul: {
+      marginLeft: '30px !important'
+    },
+    ol: {
+      marginLeft: '30px !important'
     }
   };
 };

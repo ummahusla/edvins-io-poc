@@ -1,0 +1,24 @@
+.blog-post {
+  &-single {
+    .separator {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .excerp {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style: none;
+      padding: 0;
+    }
+  }
+}

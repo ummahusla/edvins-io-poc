@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 const Latest = ({ posts }) => {
   return (
     <section className={styles.latest}>
-      <h2>Latest</h2>
+      <h2>🔥 Latest</h2>
 
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;

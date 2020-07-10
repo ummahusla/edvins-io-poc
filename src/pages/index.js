@@ -29,6 +29,9 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex;
 
+// FIXME:
+// allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 5)
+
 export const pageQuery = graphql`
   query {
     site {
@@ -36,7 +39,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 5) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
