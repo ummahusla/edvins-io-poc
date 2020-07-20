@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
+import Tags from '../components/Tags';
 
 import styles from './styles.module.scss';
 
@@ -15,17 +16,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <Tags title={post.frontmatter.title} description={post.excerpt} />
 
       <section className={`blog-post ${styles.blogPostSingle}`}>
         <h1>{post.frontmatter.title}</h1>
-
-        <p className={styles.excerpt}>{post.frontmatter.date}</p>
+        <div>
+          <time>{post.frontmatter.date}</time> <Tags tags={post.frontmatter.tags} />
+        </div>
 
         <MDXRenderer>{post.body}</MDXRenderer>
-
         <hr className={styles.separator} />
-
         <ul className={styles.footerLinks}>
           <li>
             {previous && (

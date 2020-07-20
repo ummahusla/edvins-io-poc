@@ -3,12 +3,13 @@ import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
-import List from '../components/List';
 import SEO from '../components/seo';
+import Posts from '../components/Posts';
+import List from '../components/List';
 
 const BlogIndex = ({ data, location }) => {
   const INDEX_PAGE_TITLE = 'Edvins Antonovs';
-  const INDEX_PAGE_KEYWORDS = [`blog`, `gatsby`, `javascript`, `react`];
+  const INDEX_PAGE_KEYWORDS = [`edvins antonovs`, `software developer`];
 
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMdx.edges;
@@ -19,7 +20,9 @@ const BlogIndex = ({ data, location }) => {
 
       <Bio />
 
-      <List posts={posts} />
+      <Posts title="Latest" posts={posts} />
+
+      <List title="Projects" />
     </Layout>
   );
 };

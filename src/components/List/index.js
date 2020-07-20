@@ -5,28 +5,19 @@ import Tags from '../Tags';
 
 import styles from './styles.module.scss';
 
-const List = ({ posts }) => {
+const List = ({ title, data }) => {
   return (
     <section className={styles.list}>
-      <h2>Latest</h2>
+      <h2>{title}</h2>
 
-      {posts &&
-        posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
+      <div className={styles.container}>
+        <div>
+          <div>Hustle Market</div>
+          <div>Marketplace for buying and selling profitable online businesses.</div>
+        </div>
 
-          return (
-            <Link className={styles.link} key={node.fields.slug} to={node.fields.slug}>
-              <div className={styles.post}>
-                <div className={styles.meta}>
-                  <h3 className={styles.header}>{title}</h3>
-                  <time>{node.frontmatter.date}</time>
-                </div>
-
-                <Tags tags={node.frontmatter.tags} />
-              </div>
-            </Link>
-          );
-        })}
+        <Tags tags={['React', 'Redux', 'Next.js', 'Firebase']} />
+      </div>
     </section>
   );
 };
