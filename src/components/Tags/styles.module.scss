@@ -1,0 +1,59 @@
+$background-color: #fff;
+$default-color: #1d2d35;
+
+$react-tag: #61dafb;
+$notes-tag: #fff740;
+$books-tag: #fbceb1;
+$angular-tag: #ff4081;
+$cms-tag: #63c7b2;
+$productivity-tag: #8e6c88;
+
+.tags {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+
+  .tag {
+    display: block;
+    font-weight: 500;
+    background-color: darken($background-color, 5%);
+    color: $default-color;
+    margin: 4px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border-bottom: 0;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  :global(.tag-react) {
+    color: darken($react-tag, 40%) !important;
+    background-color: lighten($react-tag, 20%) !important;
+  }
+
+  :global(.tag-notes) {
+    color: darken($notes-tag, 45%) !important;
+    background-color: lighten($notes-tag, 20%) !important;
+  }
+
+  :global(.tag-books) {
+    color: darken($books-tag, 35%) !important;
+    background-color: lighten($books-tag, 5%) !important;
+  }
+
+  :global(.tag-angular) {
+    color: darken($angular-tag, 30%) !important;
+    background-color: lighten($angular-tag, 25%) !important;
+  }
+
+  :global(.tag-cms) {
+    color: darken($cms-tag, 30%) !important;
+    background-color: lighten($cms-tag, 20%) !important;
+  }
+
+  :global(.tag-productivity) {
+    color: darken($productivity-tag, 30%) !important;
+    background-color: lighten($productivity-tag, 25%) !important;
+  }
+}

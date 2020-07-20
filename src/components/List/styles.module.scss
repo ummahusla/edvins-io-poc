@@ -1,0 +1,45 @@
+$background-color: #fff;
+$default-color: #1d2d35;
+$subtitle-color: #868e96;
+
+.list {
+  margin: 64px 0;
+
+  .link {
+    color: $default-color;
+    box-shadow: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: -24px;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    transition: background-color 0.1s ease;
+
+    &:hover {
+      background-color: darken($background-color, 5%);
+    }
+
+    .meta {
+      .header {
+        margin: 0;
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+
+      time {
+        color: $subtitle-color;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}

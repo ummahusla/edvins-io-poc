@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
-import Latest from '../components/Latest';
+import List from '../components/List';
 import SEO from '../components/seo';
 
 const BlogIndex = ({ data, location }) => {
@@ -13,24 +13,18 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMdx.edges;
 
-  // FIXME: Remove me after testing
-  const newPosts = [...posts, ...posts, ...posts, ...posts, ...posts, ...posts, ...posts, ...posts];
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={INDEX_PAGE_TITLE} keywords={INDEX_PAGE_KEYWORDS} />
 
       <Bio />
 
-      <Latest posts={newPosts} />
+      <List posts={posts} />
     </Layout>
   );
 };
 
 export default BlogIndex;
-
-// FIXME:
-// allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 5)
 
 export const pageQuery = graphql`
   query {
@@ -39,7 +33,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 5) {
       edges {
         node {
           excerpt
@@ -49,6 +43,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM YYYY")
             title
+            tags
           }
         }
       }
