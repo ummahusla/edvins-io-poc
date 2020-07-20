@@ -2,8 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+import dracula from 'prism-react-renderer/themes/dracula';
 
-const Code = ({ codeString, language, ...props }) => {
+const Code = ({ codeString, language = 'jsx', ...props }) => {
   if (props['react-live']) {
     return (
       <LiveProvider code={codeString} noInline={true}>

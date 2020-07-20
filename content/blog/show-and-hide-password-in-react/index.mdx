@@ -6,24 +6,24 @@ tags: ['react']
 
 In this article, you’ll learn how to show and hide password input field in React.js using basic state manipulations. Moreover, you will learn how to make this component more re-usable to suit your needs. Initially, let's start by creating a `PasswordShowHide` component which has `hidden` state parameter set to `true` by default. As well as generic `input` and `button` elements.
 
-```
+```jsx
 class PasswordShowHide extends Component {
-constructor(props) {
-  super(props);
+  constructor(props) {
+    super(props);
 
-  this.state = {
-    hidden: true
-  };
-}
+    this.state = {
+      hidden: true
+    };
+  }
 
-render() {
-  return (
-    <div>
-      <input type="text" />
-      <button>Show / Hide</button>
-    </div>
-  );
-}
+  render() {
+    return (
+      <div>
+        <input type="text" />
+        <button>Show / Hide</button>
+      </div>
+    );
+  }
 }
 ```
 
@@ -34,8 +34,8 @@ render() {
 - Bind `this.toggleShow` in the class constructor.
 - Update `input` type to be dependable on the `hidden` state parameter, so if the `hidden` is `true` - we use `password` type, and `text` for `false`.
 
-```
-import React, { Component } from "react";
+```jsx
+import React, { Component } from 'react';
 
 class PasswordShowHide extends Component {
   constructor(props) {
@@ -54,9 +54,7 @@ class PasswordShowHide extends Component {
   render() {
     return (
       <div>
-        <input
-          type={this.state.hidden ? "password" : "text"}
-        />
+        <input type={this.state.hidden ? 'password' : 'text'} />
         <button onClick={this.toggleShow}>Show / Hide</button>
       </div>
     );
@@ -74,8 +72,8 @@ You've made it so far. Now we toggle state upon the button click. But what next
 
 We are nearly finished as we have only last final step to make. We need to implement the `onChange` logic for the `input` component as well as slightly update the component so we could pass `password` as a prop (e.g. `PasswordShowHide password="qwerty1337"`).
 
-```
-import React, { Component } from "react";
+```jsx
+import React, { Component } from 'react';
 
 class PasswordShowHide extends Component {
   constructor(props) {
@@ -83,7 +81,7 @@ class PasswordShowHide extends Component {
 
     this.state = {
       hidden: true,
-      password: ""
+      password: ''
     };
 
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
@@ -108,7 +106,7 @@ class PasswordShowHide extends Component {
     return (
       <div>
         <input
-          type={this.state.hidden ? "password" : "text"}
+          type={this.state.hidden ? 'password' : 'text'}
           value={this.state.password}
           onChange={this.handlePasswordChange}
         />
