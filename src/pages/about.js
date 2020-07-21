@@ -29,12 +29,9 @@ const AboutPage = ({ location }) => (
 
       <div className={styles.section}>
         <h3>Weird</h3>
-        <p>
-          When I’m not working, I love to read, run and spend time with my family. I’m a little
-          obsessed with coffee and pizza.
-        </p>
+        <p>When I’m not working, I love to read, run and spend time with my family.</p>
 
-        <p>I’m an occasional Hearthstone player and I speak 3 languages.</p>
+        <p>I’m a little obsessed with coffee and pizza.</p>
       </div>
     </div>
 
