@@ -1,4 +1,30 @@
 .footer {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-top: 60px;
+
+  .row {
+    margin-bottom: 20px;
+
+    .nav-link {
+      box-shadow: none;
+      text-decoration: none;
+      white-space: nowrap;
+      border-radius: 5px;
+      padding: 16px 24px;
+      color: #868e96;
+      font-weight: 400;
+      text-align: center;
+      font-size: 16px;
+
+      &:hover {
+        background-color: darken(#fff, 5%);
+        color: #1d2d35;
+      }
+    }
+  }
 }

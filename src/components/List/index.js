@@ -5,19 +5,26 @@ import Tags from '../Tags';
 
 import styles from './styles.module.scss';
 
-const List = ({ title, data }) => {
+const List = ({ title = '', lead = '', data }) => {
   return (
     <section className={styles.list}>
-      <h2>{title}</h2>
+      {title && <h2>{title}</h2>}
 
-      <div className={styles.container}>
-        <div>
-          <div>Hustle Market</div>
-          <div>Marketplace for buying and selling profitable online businesses.</div>
-        </div>
+      {lead && <p>{lead}</p>}
 
-        <Tags tags={['React', 'Redux', 'Next.js', 'Firebase']} />
-      </div>
+      {data.map(({ name, status, description, tags, link }, key) => (
+        <a className={styles.container} key={key} href={link}>
+          <div className={styles.meta}>
+            <h3 className={styles.header}>
+              {name} {status && <span className={styles.label}>{status}</span>}
+            </h3>
+
+            {description && <p>{description}</p>}
+          </div>
+
+          {tags && <Tags tags={tags} />}
+        </a>
+      ))}
     </section>
   );
 };

@@ -1,11 +1,53 @@
 $background-color: #fff;
 $default-color: #1d2d35;
 $subtitle-color: #868e96;
+$link-color: #2b37ff;
 
 .list {
   margin: 64px 0;
 
   .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: -24px;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    transition: background-color 0.1s ease;
+    color: $default-color;
+    box-shadow: none;
+
+    &:hover {
+      text-decoration: none;
+      background-color: darken($background-color, 5%);
+    }
+
+    .meta {
+      .header {
+        margin: 0;
+        font-weight: 900;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+
+        .label {
+          font-weight: 400;
+          margin-left: 10px;
+          padding: 5px;
+          font-size: 14px;
+          border-radius: 10px;
+          color: $background-color;
+          background-color: $default-color;
+        }
+      }
+
+      p {
+        color: $subtitle-color;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
   }
 }

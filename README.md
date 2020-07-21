@@ -50,3 +50,20 @@ this blog possible!
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Notes
+
+### Some highlighted code
+
+```js
+const some = {};
+```
+
+### A live code sample:
+
+```js react-live
+const onClick = () => {
+  alert('clicked');
+};
+render(<button onClick={onClick}>Click Me!</button>);
+```

@@ -18,6 +18,9 @@ const Navigation = () => (
         <Link className={styles.navLink} to={`/about`}>
           About
         </Link>
+        <Link className={styles.navLink} to={`/projects`}>
+          Projects
+        </Link>
       </div>
     </div>
   </nav>

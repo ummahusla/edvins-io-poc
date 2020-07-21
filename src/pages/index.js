@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import Posts from '../components/Posts';
 import List from '../components/List';
+import { projectsData } from '../../content/projects/index';
 
 const BlogIndex = ({ data, location }) => {
   const INDEX_PAGE_TITLE = 'Edvins Antonovs';
@@ -13,6 +14,8 @@ const BlogIndex = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMdx.edges;
+  const { projects, cta } = projectsData;
+  const projectsSliced = projects.slice(0, 3);
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -20,9 +23,13 @@ const BlogIndex = ({ data, location }) => {
 
       <Bio />
 
-      <Posts title="Latest" posts={posts} />
+      <hr />
 
-      <List title="Projects" />
+      <Posts title="Latest blog posts" posts={posts} />
+
+      <hr />
+
+      <List title="Latest projects" data={projectsSliced} cta={cta} />
     </Layout>
   );
 };

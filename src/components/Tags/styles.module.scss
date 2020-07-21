@@ -7,6 +7,11 @@ $books-tag: #fbceb1;
 $angular-tag: #ff4081;
 $cms-tag: #63c7b2;
 $productivity-tag: #8e6c88;
+$firebase-tag: #ffca28;
+$redux-tag: #764abc;
+$next-tag: #000;
+$gatsby-tag: #362066;
+$graphql-tag: #e10098;
 
 .tags {
   display: flex;
@@ -55,5 +60,30 @@ $productivity-tag: #8e6c88;
   :global(.tag-productivity) {
     color: darken($productivity-tag, 30%) !important;
     background-color: lighten($productivity-tag, 25%) !important;
+  }
+
+  :global(.tag-firebase) {
+    color: darken($firebase-tag, 30%) !important;
+    background-color: lighten($firebase-tag, 25%) !important;
+  }
+
+  :global(.tag-redux) {
+    color: darken($redux-tag, 30%) !important;
+    background-color: lighten($redux-tag, 25%) !important;
+  }
+
+  :global(.tag-next) {
+    color: darken($background-color, 5%) !important;
+    background-color: lighten($next-tag, 40%) !important;
+  }
+
+  :global(.tag-gatsby) {
+    color: darken($background-color, 5%) !important;
+    background-color: lighten($gatsby-tag, 30%) !important;
+  }
+
+  :global(.tag-graphql) {
+    color: darken($graphql-tag, 30%) !important;
+    background-color: lighten($graphql-tag, 30%) !important;
   }
 }

@@ -8,8 +8,10 @@ const Tags = ({ tags }) => {
     <>
       {tags && (
         <div className={styles.tags}>
-          {tags.map(tag => (
-            <div className={styles.tag + ` tag-${tag.toLowerCase()}`}>{tag}</div>
+          {tags.map((tag, key) => (
+            <div className={styles.tag + ` tag-${tag.toLowerCase()}`} key={key}>
+              {tag.toLowerCase()}
+            </div>
           ))}
         </div>
       )}

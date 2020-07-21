@@ -5,9 +5,11 @@ import Tags from '../Tags';
 
 import styles from './styles.module.scss';
 
-const Posts = ({ title, posts }) => (
+const Posts = ({ title = '', lead = '', posts }) => (
   <section className={styles.posts}>
-    <h2>{title}</h2>
+    {title && <h2>{title}</h2>}
+
+    {lead && <p>{lead}</p>}
 
     {posts &&
       posts.map(({ node }) => {
