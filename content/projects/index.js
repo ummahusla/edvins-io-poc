@@ -26,21 +26,21 @@ export const projectsData = {
       status: 'Pause',
       description: 'Marketplace for buying and selling profitable online businesses.',
       tags: ['React', 'Redux', 'Next', 'Firebase'],
-      link: 'http://hustle.market/'
+      link: 'https://hustle.market/'
     },
     {
       name: 'Kale',
       status: 'Pause',
       description: 'Expense tracking bot for Telegram.',
       tags: ['Node', 'Firebase'],
-      link: 'http://kale.money/'
+      link: 'https://kale.money/'
     },
     {
       name: 'Stealth Labs',
       status: 'Launched',
       description: 'Digital agency which I use to work with my clients.',
       tags: ['React', 'Gatsby', 'GraphQL'],
-      link: 'http://stealthlabs.io/'
+      link: 'https://stealthlabs.io/'
     },
     {
       name: 'gulp-starter',

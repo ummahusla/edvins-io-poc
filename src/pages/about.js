@@ -10,7 +10,7 @@ const AboutPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="About" />
 
-    <Bio cta={false} />
+    <Bio cta={false} short={false} />
 
     <div className={styles.split}>
       <div className={styles.section}>

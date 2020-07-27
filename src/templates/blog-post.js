@@ -20,24 +20,26 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
       <section className={`blog-post ${styles.blogPostSingle}`}>
         <h1>{post.frontmatter.title}</h1>
-        <div>
+        <div className={styles.meta}>
           <time>{post.frontmatter.date}</time> <Tags tags={post.frontmatter.tags} />
         </div>
 
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr className={styles.separator} />
+
+        <hr />
+
         <ul className={styles.footerLinks}>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                &larr; {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.frontmatter.title} &rarr;
               </Link>
             )}
           </li>

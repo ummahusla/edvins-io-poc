@@ -1,16 +1,22 @@
 .blog-post {
   &-single {
-    hr {
-      width: 80%;
-      margin: 0 auto;
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
     .excerp {
       display: block;
       margin-top: 10px;
       margin-bottom: 10px;
+    }
+
+    .meta {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      time {
+        color: #868e96;
+        font-weight: 400;
+        font-size: 14px;
+        margin-right: 20px;
+      }
     }
 
     .footer-links {
@@ -19,6 +25,7 @@
       justify-content: space-between;
       list-style: none;
       padding: 0;
+      margin-left: 0 !important;
     }
   }
 }
