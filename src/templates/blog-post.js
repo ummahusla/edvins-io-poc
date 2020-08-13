@@ -21,7 +21,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <section className={`blog-post ${styles.blogPostSingle}`}>
         <h1>{post.frontmatter.title}</h1>
         <div className={styles.meta}>
-          <time>{post.frontmatter.date}</time> <Tags tags={post.frontmatter.tags} />
+          <time>{post.frontmatter.date}</time> <div className={styles.divider}>•</div>{' '}
+          <Tags tags={post.frontmatter.tags} />
         </div>
 
         <MDXRenderer>{post.body}</MDXRenderer>

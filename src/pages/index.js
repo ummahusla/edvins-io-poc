@@ -23,8 +23,6 @@ const BlogIndex = ({ data, location }) => {
 
       <Bio />
 
-      <hr />
-
       <Posts title="Latest blog posts" posts={posts} />
 
       <hr />
