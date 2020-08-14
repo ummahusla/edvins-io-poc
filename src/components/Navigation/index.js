@@ -11,7 +11,7 @@ const Navigation = () => (
           <span className={styles.emoji}>🧑‍💻</span> Edvins Antonovs
         </Link>
       </div>
-      <div>
+      <div className={styles.nav}>
         <Link className={styles.navLink} to={`/blog`}>
           Blog
         </Link>
